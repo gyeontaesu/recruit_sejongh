@@ -1,0 +1,282 @@
+* {margin:0; padding:0;}
+
+p,div,th,td,
+select,input,form,textarea,option,
+h1,h2,h3,h4,h5,h6 {font-size:11px; font-family:"dotum"; color:#aaaaaa; line-height:1.5em;}
+select,input,form,textarea,option {font-size:13px;}
+image {border:0;}
+
+A:link {color:#666666;text-decoration:none;}
+A:visited {color:#666666;text-decoration:none;}
+A:active {color:#000000;text-decoration:none;}
+A:hover {color:#000000;position:relative;}
+
+
+.clear{display:block; float:none; clear:both; height:0; width:100%; font-size:0; line-height:0; overflow:hidden;}
+
+body {text-align:center;}
+#wrap {margin:0 auto;}
+#header,
+#visual,
+#snb,
+#content,
+#locationbar,
+#footer {position:relative; text-align:left;}
+
+button {margin:0; padding:0; border:none; background:transparent; cursor:pointer; vertical-align:middle;}
+table {border-collapse:collapse;}
+th, td {margin:0; padding:0;}
+input.text,
+select {border:1px solid #c8c8c8; height:16px; _height:14px;}
+textarea {border:1px solid #c8c8c8;}
+select, input {vertical-align:middle;}
+div{scrollbar-face-color:#FFFFFF; scrollbar-highlight-color:#FFFFFF; scrollbar-3dlight-color:#C0C0C0; scrollbar-darkshadow-color:#C0C0C0; scrollbar-shadow-color:#FFFFFF; scrollbar-arrow-color:#808080; scrollbar-track-color:#E0E0E0; }
+
+
+
+
+/*** Layout ***/
+/******************************************************************************************/
+html {_overflow-x: hidden;}
+body {overflow-x:hidden; text-align:center;}
+#wrap {width:100%;}
+
+	#headerWrap {z-index:10; position:relative; margin:0 auto; width:100%;}
+		#header {margin:0 auto; width:950px; height:125px;}
+
+	#containerWrap {z-index:2; position:relative; clear:both; width:100%;}
+		#container {margin:52px auto 0; z-index:3; position:relative; width:950px;}
+			#snb {z-index:3; display:inline; float:left; width:165px; height:403px; background:url(snb_menu_bg.png) bottom no-repeat;}
+			#content {z-index:3; display:inline; float:right; width:693px; background:url(content_bg.png) top right no-repeat;}
+				#locationbar {margin:0 0 44px; width:100%; height:86px;}
+
+	#footerWrap {clear:both; margin:60px 0 10px; width:100%; background-color:#f3f3f3;}
+		#footer {margin:0 auto; width:950px; height:59px;}
+
+
+/*** header ***/
+/******************************************************************************************/
+#header img.logo {z-index:1002; position:absolute; top:51px; left:0;}
+#header div.gnb {z-index:1000; position:absolute; top:51px; left:309px;}
+
+
+/*** snb ***/
+#snb div.menu {margin:25px 0 0; position:relative; width:100%;}
+#snb div.menu div.over_bg {z-index:1; position:absolute; top:0; left:0; width:165px; height:18px; background:url(snb_menu_over_bg.png) no-repeat;}
+#snb div.menu ul,
+#snb div.menu li {width:100%; list-style:none; padding:0; margin:0;}
+#snb div.menu ul {position:relative; z-index:2;}
+#snb div.menu li {width:165px; height:23px; background:url(snb_menu_sprites.png) no-repeat 500px 500px; font-size:0;}
+#snb div.menu li span {display:none;}
+#snb div.menu li a {display:block; width:100%; height:100%;}
+
+
+/*** locationbar ***/
+/******************************************************************************************/
+#locationbar div.location {position:absolute; top:0; left:0; width:400px; height:30px; font-size:11px; color:#898989;}
+#locationbar div.location strong {font-weight:normal;}
+#locationbar div.title {position:absolute; top:54px; left:0; width:400px; height:43px;}
+
+
+
+
+
+/*** 입사지원서 작성 ***/
+	#ajax-loading {z-index:2; display:none; width:100%; height:100%;}
+	#ajax-loading div.overlay {z-index:2; position:absolute; left:0; top:0; width:100%; height:100%; background-color:#000;}
+	#ajax-loading img {z-index:3; position:absolute; left:50%; top:50%; width:25px; height:25px; margin:-12px 0 0 -12px;}
+
+	#application {width:100%;}
+	#application div.step1 {}
+	#application div.step2 {display:none;}
+	#application div.step3 {display:none;}
+
+	#application div.processbar {position:relative; margin:20px 0; width:479px; height:92px; background:url(application_write_processbar_off.png) no-repeat;}
+	#application div.processbar div.over {position:absolute; top:0; left:0; width:130px; height:92px; background:url(application_write_processbar_on.png) no-repeat 0 0;}
+
+	/*** Table ***/
+	#application table {margin:0 0 20px; width:100%; border-collapse:collapse; border-bottom:2px solid #e3e3e3;}
+	#application table caption {width:auto; background-color:#eff5fe; text-align:center; font-size:12px; color:#2e3955; padding:5px; border-top:1px solid #3b4c82; border-bottom:1px solid #b7b7b7;}
+	#application table caption strong {margin:0 3px; font-weight:bold;}
+	#application table th,
+	#application table td {border-top:1px solid #e3e3e3; border-bottom:1px solid #e3e3e3; padding:5px;}
+	#application table th {padding-left:10px; text-align:left; background-color:#f1f1f1; color:#2e3955; font-weight:normal;}
+	#application table th.required {background:url(required_bg.gif) 3px 50% no-repeat; background-color:#f1f1f1;} /** 필수사항 **/
+	#application table tfoot th,
+	#application table tfoot td {background-color:transparent; border:none;}
+
+	#application table td.multiline {padding:0;}
+	#application table td.multiline table {margin:0; border:none;}
+	
+
+	/* 모집구분 */
+	#application div.step1 table.summary th {width:80px;}
+	#application div.step1 table.summary td.title {color:#666666; width:auto;}
+
+	/* 인적사항 */
+	#application div.step1 table.personal_info th {width:80px;}
+	#application div.step1 table.personal_info input.text {width:60%;}
+	#application div.step1 table.personal_info input.text {width:60%;}
+	#application div.step1 td.photo {text-align:center;}
+	#application div.step1 td.photo div.photo {width:115px; height:150px; border:1px solid #d6d6d6;}
+	#application div.step1 td.photo div.photo img {width:100%; height:100%;}
+	#application div.step1 div.find_file {margin:3px auto 0; position:relative; width:77px; height:22px; background:url(application_findfile_button.png) no-repeat; overflow:hidden;}
+	/* 병역사항 */
+	#application div.step1 table.army_info th {width:50px;}
+	/* 기타 */
+	#application div.step1 table.other_info th {width:50px;}
+
+	/* step2 */
+	#application div.step2 table th {padding-left:5px; text-align:center;}
+	#application div.step2 table th.required {padding-top:8px; background:url(required_bg.gif) 50% 4px no-repeat; background-color:#f1f1f1;} /** 필수사항 **/
+
+	/* 자기소개 */
+	#application div.step3 table.introduce th {width:120px;}
+	#application div.step3 table.introduce textarea {width:95%; height:100px;}
+
+	#application button.findzip {margin:0 1px; width:96px; height:22px; background:url(application_findzip_button.png) no-repeat;}
+	#application button.findzip span {display:none;}
+	#application button.item_add {width:78px; height:22px; background:url(application_item_add_button.png) no-repeat;}
+	#application button.item_add span {display:none;}
+	#application button.item_del {width:44px; height:22px; background:url(application_item_del_button.png) no-repeat;}
+	#application button.item_del span {display:none;}
+	#application button.find_code {margin:0 1px; width:17px; height:17px; background:url(application_find_code_button.png) no-repeat;}
+	#application button.find_code span {display:none;}
+
+
+	/*** Form ***/
+	#application input.text {width:90%;}
+	#application input.regno {width:60px !important;}
+	#application input.date {width:65px !important;}
+	#application input.tel1 {width:30px !important;}
+	#application input.tel2,
+	#application input.tel3 {width:40px !important;}
+	#application input.email_id {width:80px !important;}
+	#application input.email_addr {width:80px !important;}
+	#application input.zipcode {width:40px !important;}
+	#application input.find_code {width:70% !important;}
+	#application input[type='text']:focus,
+	#application input[type='password']:focus,
+	#application textarea {width:100%;}
+	#application select:focus,
+	#application textarea:focus {border:1px solid #080808;}
+
+	/*** buttonBox ***/
+	#application div.buttonBox {margin:10px 0; text-align:center;}
+	#application div.buttonBox button {}
+	#application div.buttonBox button span {display:none;}
+	#application div.buttonBox button.prev {width:98px; height:25px; background:url(application_prev_button.png) no-repeat;}
+	#application div.buttonBox button.next {width:98px; height:25px; background:url(application_next_button.png) no-repeat;}
+	#application div.buttonBox button.submit {width:108px; height:25px; background:url(application_submit.png) no-repeat;}
+
+
+
+	/*** 팝업 ***/
+	#popup {position:absolute;z-index:10000; display:none; width:100%; height:100%; top:0; left:0; top:500px;}
+	#popup div.overlay {z-index:2; position:absolute; left:0; top:0; width:100%; height:100%; background-color:#000;}
+	#popup button.close_btn {z-index:3; position:absolute; left:100%; top:10px; margin-left:-68px; width:56px; height:32px;}
+	#popup button.close_btn span {display:none;}
+	#popup .close_btn {cursor:pointer;}
+	#popup div.popup {z-index:3; position:absolute; left:0; top:0; width:410px; height:350px; overflow:hidden; text-align:left;}
+
+	#popup div.popup div.bg {z-index:3; position:absolute; width:100%; height:100%; background:url(popup_bg.png) no-repeat;}
+	#popup div.popup div.content {z-index:4; position:absolute; overflow:hidden;}
+	#popup div.data {display:none;}
+
+
+	/*** 레이어팝업 검색 ***/
+	#popup div.searchBox div.headline {width:100%; height:20px; line-height:20px; background-color:#26A1CB; color:#fff; font-size:13px; font-weight:bold; text-align:center;}
+	#popup div.searchBox div.searchBox {margin:5px 0; width:100%; text-align:center;}
+	#popup div.searchBox div.searchBox input.keyword {margin:0 10px; width:80px;}
+	#popup div.searchBox div.searchBox button.submit {border:1px solid #aaa; background-color:#efefef; padding:0; width:50px; height:19px;}
+	#popup div.searchBox div.resultBox {width:355px; height:200px; overflow:hidden; overflow-y:scroll; border:1px solid #c8c8c8;}
+	#popup div.searchBox ul.data,
+	#popup div.searchBox div.no_data {display:none;}
+	#popup div.searchBox div.no_input,
+	#popup div.searchBox div.no_data {margin:80px 0; width:100%; text-align:center;}
+	#popup div.searchBox ul.data {list-style:none; margin:5px;}
+	#popup div.searchBox ul.data li {list-style:none; margin:1px;}
+	#popup div.searchBox ul.data li a {color:#434343; text-decoration:none;}
+	#popup div.searchBox ul.data li a:hover {color:#434343; text-decoration:underline;}
+
+
+	/*** 검색박스 ***/
+	div.searchBox {margin:0 0 15px; width:100%;}
+	div.searchBox select.target {width:105px; height:20px; background-color:#777777; border:2px solid #777777;}
+	div.searchBox select.target option {color:#ffffff;}
+	div.searchBox input.keyword {width:170px; height:19px;}
+	div.searchBox button.submit {width:32px; height:20px; background:url(searchBox_submit.gif) no-repeat;}
+	div.searchBox button.submit span {display:none;}
+
+	/*** 리스트 테이블 ***/
+	table.list {border-collapse:collapse; width:100%; border-bottom:2px solid #b7b7b7;}
+	table.list th,
+	table.list td {padding:7px;}
+	table.list th {border-bottom:2px solid #b7b7b7; text-align:center; color:#2e3955; font-weight:normal;}
+	table.list td {border-top:1px solid #e3e3e3; border-bottom:1px solid #b7b7b7; text-align:center; color:#aaaaaa;}
+	table.list td.title {text-align:left;}
+
+	/*** 뷰 테이블 ***/
+	table.view {border-collapse:collapse; margin:0 0 40px; width:100%; border-top:2px solid #b7b7b7; border-bottom:2px solid #b7b7b7;}
+	table.view th,
+	table.view td {padding:7px; border-bottom:1px solid #e3e3e3;}
+	table.view th {text-align:center; color:#2e3955; font-weight:normal; background-color:#f1f1f1; width:70px;}
+	table.view td {color:#aaaaaa;}
+	table.view td.title {color:#666666;}
+	table.view td.content {padding:15px; min-height:100px; _height:100px;}
+
+	/*** 페이징 정보 ***/
+	div.page_info {margin:10px 0 0 0; width:100%; height:20px;}
+	div.page_info div.paging {float:left; padding:5px 0;}
+	div.page_info div.paging a {float:left;}
+	div.page_info div.paging a.pprev {width:14px; height:16px; padding:2px 3px; background:url(paging_pprev_icon.gif) 2px 2px no-repeat;}
+	div.page_info div.paging a.prev {width:14px; height:16px; padding:2px 5px 0 3px; background:url(paging_prev_icon.gif) 2px 2px no-repeat;}
+	div.page_info div.paging a.prevPages,a.nextPages {padding:0 5px; color:#737373;}
+	div.page_info div.paging a.curPage {padding:0 5px; color:#2e3955; font-weight:bold;}
+	div.page_info div.paging a.next  {width:14px; height:16px; padding:2px 3px 0 5px; background:url(paging_next_icon.gif) 5px 2px no-repeat;}
+	div.page_info div.paging a.nnext {width:14px; height:16px; padding:2px 3px; background:url(paging_nnext_icon.gif) 2px 2px no-repeat;}
+	div.page_info div.paging .text {display:none;}
+	div.page_info div.info {float:right; text-align:right; color:#aaaaaa;}
+
+
+
+/*** 입사지원서 조회/수정 ***/
+	#application_check {position:relative; width:678px; height:256px; background:url(application_check_bg.png) no-repeat;}
+	#application_check table {position:absolute; top:15px; left:300px; width:375px;}
+	#application_check table th,
+	#application_check table td {padding:3px 8px;}
+	#application_check table th {color:#2e3955; font-weight:normal; text-align:right;}
+	#application_check button.find_EXAMNO {width:100px; height:26px; background:url(application_check_uid_btn.png) no-repeat; behavior:expression(fixPNG(this));}
+	#application_check button.find_EXAMNO span {display:none;}
+
+	#application_check div.buttonBox {position:absolute; top:175px; left:300px; width:375px; text-align:center;}
+	#application_check button.submit {width:98px; height:25px; background:url(application_check_submit.png) no-repeat; behavior:expression(fixPNG(this));}
+	#application_check button.submit span {display:none;}
+
+	#application_check div.messageBox {position:absolute; top:230px; left:300px; width:340px; text-align:right; color:#3b4c82;}
+
+
+
+/*** 입사지원 결과확인 ***/
+	#application_result {position:relative; width:678px; height:223px; background:url(application_result_bg.png) no-repeat;}
+	#application_result table.input {position:absolute; top:15px; left:300px; width:375px;}
+	#application_result table.input th,
+	#application_result table.input td {padding:8px 8px;}
+	#application_result table.input th {color:#2e3955; font-weight:normal; text-align:right;}
+
+	#application_result div.buttonBox {position:absolute; top:130px; left:300px; width:345px; text-align:right;}
+	#application_result button.cancel {margin:0 2px; _margin:0 3px; width:68px; height:25px; background:url(application_result_cancel.png) no-repeat; behavior:expression(fixPNG(this));}
+	#application_result button.cancel span {display:none;}
+	#application_result button.submit {margin:0 2px; _margin:0 3px; width:68px; height:25px; background:url(application_result_submit.png) no-repeat; behavior:expression(fixPNG(this));}
+	#application_result button.submit span {display:none;}
+
+	#application_result div.messageBox {position:absolute; top:192px; left:300px; width:340px; text-align:right; color:#3b4c82;}
+
+	#application_result table.result {position:absolute; top:220px; left:0; width:100%;}
+	#application_result table.result th,
+	#application_result table.result td {padding:8px 8px; text-align:center;}
+	#application_result table.result th {background:url(application_result_table_th_bg.png) no-repeat left 50%; background-color:#eff5ff; color:#2d3851; font-weight:normal; border-top:1px solid #3a4c83;}
+	#application_result table.result th.first {background:none; background-color:#eff5ff;}
+	#application_result table.result td {border-top:1px solid #b7b7b7; border-bottom:2px solid #e3e3e3;}
+
+

@@ -1,0 +1,11 @@
+#container {width:1112px; margin-top:0;}
+#content {float:none; width:100%; text-align:center; background:none;}
+#footerWrap {margin-top:25px;}
+
+div.main_content_box {margin:0 auto; width:950px; text-align:left;}
+	div.main_notice {float:left; width:275px;}
+	div.main_notice table {margin:10px 0 0 0; width:100%;}
+	div.main_notice td {font-size:9px; color:#808286; font-family:Tahoma; height:18px;}
+	div.main_notice td a {display:block; font-size:11px; color:#505358; font-family:dotum; width:95%; height:15px; overflow:hidden;}
+
+	div.main_quick_menu {float:right;}
